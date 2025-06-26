@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHMAD SAEED</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-full w-full box-border bg-red-400 ">
+    <div id="main">
+        <div id="nav" class="h-[10vh]  w-full  fixed flex justify-between items-center px-10 pt-[5vh]">
+            <div id="logo" class="h-[5vh] w-[5vh]">
+                <img src="./black logo.png" alt="">
+            </div>
+            <div id="elem" class="font3 gap-[5vh] mr-[5vh] flex justify-between items-center">
+               <a href="./codenest.html"><h1>Home</h1></a> 
+                <h1>Work</h1>
+                <h1>About</h1>
+                <h1 class="md:hidden">Menu</h1>
+            </div>
+        </div>
+        <div id="page1" class="hero h-[100vh] w-auto bg-white">
+            <div id="name" class="leading-none text-center pt-[20vh]">
+                <h1 class="font1 text-[28vh] mt-[8vh]">AHMAD</h1>
+                <h1 class="font2 text-[28vh] mt-[-9vh]">SAEED</h1>
+            </div>
+
+        </div>
+        <div id="page2" class="h-[100vh]  w-auto bg-white ">
+            <div id="images" class="w-auto flex justify-center   ">
+                <div id="image" class="top-0"> <img src="./image1.jfif" alt=""><h3 class="font5 text-[3vh] text-black">Colors.</h3></div>
+                <div id="image"> <img src="./image3.jfif" alt=""><h3 class="font5 text-[3vh] text-black">Colors.</h3></div>
+                <div id="image"> <img src="./image2.jpg" alt=""><h3 class="font5  text-[3vh] text-black">Dillupeek.</h3></div>
+                <div id="image"> <img src="./image4.jfif" alt=""><h3 class="font5 text-[3vh] text-black">Truth.</h3></div>
+                <div id="image"> <img src="./image5.jfif" alt=""><h3 class="font5 text-[3vh] text-black">Deny.</h3></div>
+                <div id="image"> <img src="./image6.jfif" alt=""><h3 class="font5 text-[3vh] text-black">Crave.</h3></div>
+            </div>
+            <div id="text" class="text-center mt-[10vh]">
+                <h1 class="font2 text-[10vh] leading-none text-center flex items-center justify-center">INSPIRE <br> TO
+                    <br> ACQUIRE
+                </h1>
+            </div>
+        </div>
+        <div id="words"
+            class="h-[100vh] w-auto bg-white pt-[10vh] page2 text-center leading-none pt-[25vh] bg-[url('word5.jfif')] ">
+            <div class="elem elem1  relative  px-[0vw] mx-[70vh]   " data-img="./word1.jfif">
+            <h2 class="cursor-pointer text-[6vw] opacity-50 shuffle-text uppercase font2 hover:opacity-100">The Shift
+            </h2>
+
+            </div>
+            <div class="elem elem1  relative  px-[0vw]   mx-[70vh] " data-img="./word2.gif">
+            <h2 class="cursor-pointer text-[6vw] opacity-50 shuffle-text uppercase font2 hover:opacity-100">Codenest
+            </h2>
+
+            </div>
+            <div class="elem elem1  relative  px-[0vw]  mx-[70vh]   " data-img="./word3.jfif">
+            <h2 class="cursor-pointer bg-cover opacity-50 bg-contain repeat-none text-[6vw] shuffle-text uppercase font2 hover:opacity-100">EpicByte
+            </h2>
+
+            </div>
+            <div class="elem elem1  relative  px-[0vw] mx-[60vh]  " data-img="./word4.jfif">
+            <h2 class="cursor-pointer text-[6vw] opacity-50 shuffle-text uppercase font2 hover:opacity-100">Khawaja&Co
+            </h2>
+
+            </div>
+        </div>
+        <div id="text" class="h-[100vh] w-auto bg-white pt-[18vh] ">
+            <div id="text1" class="font1   text-[3vh] ml-[5vh] text bg-red-400 mr-[85vw] ">(What We Do.)</div>
+            <div id="text2">
+                <h1 class="font3 text-[10vh] text-center  font-light leading-none  "> <span
+                        class="text-[12vh] font-regular  font4 font-semibold tracking-tight "> crafting, thinking,
+                        building</span> <br>
+                    and <span class="text-[12vh] font-regular  font4 font-semibold tracking-tight "> partnering </span>
+                    with driven <br>
+                    <span class="text-[12vh] font-regular  font4 font-semibold tracking-tight "> individuals </span> to
+                    <span class="text-[12vh] font-regular  font4 font-semibold tracking-tight "> turn </span> bold <span
+                        class="text-[12vh] font4 font-semibold tracking-tight "> ideas </span> <br>
+                    into powerful <span class="text-[12vh] font4 font-semibold tracking-tight "> digital </span> <br>
+                    experience.
+                </h1>
+            </div>
+        </div>
+        <div id="contact" class="h-[100vh] w-auto bg-white pt-[15vh]  relative ">
+            <div id="need" class="font3 text-[8vh] ml-[10vh] font-medium  ">
+                <h1>Need a Web.</h1>
+                <div id="content" class="flex flex-col ml-[20vh] mt-[5vh]">
+                    <!-- <div id="story" class="font5 text-[5vh] ml-[10vh] font-medium">
+                    <input
+                        id="username"
+                        name="username"
+                        type="text"
+                        class="border-b border-gray-900 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
+                      />
+                      <label
+                        for="username"
+                        class="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
+                        >The Story.</label
+                      >
+                    <h1 >The Story.</h1>
+                    <div id="line" class="border border-black border-[.1vh] mt-[5vh] mr-[70vh]"></div>
+                </div>
+                <div id="story" class="font5 text-[5vh] ml-[10vh] font-medium">
+                    <h1>Email.</h1>
+                    <div id="line" class="border border-black border-[.1vh] mt-[5vh] mr-[70vh]"></div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="relative">
+                      <input
+                        id="username"
+                        name="username"
+                        type="text"
+                        class="border-b border-gray-900 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
+                      />
+                      <label
+                        for="username"
+                        class="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
+                        >Name</label
+                      >
+                    </div>
+                  </div>
+                  
+                
+                 <button>Send</button> -->
+                </div>
+                <div id="inputs" class="flex flex-col">
+                    <input type="text" id="name" placeholder="The Story."
+                        class="border-b text-[4vh] border-gray-900 mr-[70vh] py-1 text-black focus:border-b-2 focus:border-stone-700 transition-colors focus:outline-none peer bg-inherit mb-[5vh]" />
+
+                    <input type="email" id="name" placeholder="Email."
+                        class="border-b  text-[4vh] border-gray-900 mr-[70vh] py-1 text-black focus:border-b-2 focus:border-stone-700 transition-colors focus:outline-none peer bg-inherit mb-[5vh]" />
+                </div>
+            </div>
+            <div id="lower" class="flex items-center justify-between px-[5vh] mt-[20vh] ">
+                <div id="contact" class="font3 text-[3vh]   font-medium">
+                    <h1 class="font1 mt-[3vh]">Contact</h1>
+                    <h1 class="mt-[4vh]">ahmadsaeed@ahmadsaeed.me</h1>
+                    <h1>(+92)310-85-37-406</h1>
+                </div>
+                <div id="logofooter" class="h-[20vh] w-[25vh]">
+                    <img src="./black logo.png" alt="">
+                    </div>
+                <div id="footer-links" class="flex items-center gap-[10vh] justify-between ">
+                    <div id="social" class=" font3 text-[2vh]  font-medium">
+                        <h1 class="font1 ">Social</h1>
+                        <h1 class="mt-[2vh]" >Instagram</h1>
+                        <h1>LinkedIn</h1>
+                        <h1>X</h1>
+                        <h1>Facebook</h1>
+                    </div>
+                    <div id="nav" class="font3 text-[2vh] font-medium">
+                        <h1 class="font1">Nav</h1>
+                        <h1 class="mt-[2vh]">Home</h1>
+                        <h1>Projects</h1>
+                        <h1>About</h1>
+                        <h1>Menu</h1>
+                    </div>
+                </div>
+
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="script.js"></script>
+</body>
+
+</html>

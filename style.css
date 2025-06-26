@@ -1,0 +1,719 @@
+@font-face {
+    font-family: "poppins";
+    src: url(./Poppins-SemiBold.ttf);
+}
+.font1{
+    font-family: "poppins";
+}
+.font2{
+    font-family: "Pixelify Sans Medium";
+}
+@font-face {
+    font-family: "Pixelify Sans Medium";
+    src: url(./PixelifySans[wght].ttf);
+}
+@font-face {
+    font-family: "inter";
+    src: url(./Inter-Light-BETA.otf);
+}
+.font3{
+    font-family: "inter";;
+}
+@font-face {
+    font-family: "crimson";
+    src: url(./CrimsonPro-VariableFont_wght.ttf);
+}
+.font4{
+    font-family: "crimson";
+}
+@font-face {
+    font-family: "poppins regular";
+    src: url(./Poppins-Regular.ttf);
+}
+.font5{
+    font-family: "poppins regular";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    height: 100vh;
+    
+}
+
+
+
+.name {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.trail-image {
+    position: absolute;
+    pointer-events: none;
+    z-index: 100;
+    width: 240px;
+    height: 240px;
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    animation: popAndFade 2s forwards;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5vh;
+
+}
+
+@keyframes popAndFade {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(var(--rotation));
+        opacity: 0;
+    }
+    5% {
+        transform: translate(-50%, -50%) scale(0) rotate(var(--rotation));
+        opacity: 1;
+    }
+    15% {
+        transform: translate(-50%, -50%) scale(0) rotate(var(--rotation));
+        opacity: 0.9;
+    }
+    85% {
+        transform: translate(-50%, -50%) scale(1) rotate(var(--rotation));
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0) rotate(var(--rotation));
+        opacity: 0;
+    }
+}
+
+
+
+
+/* here starts the codenest */
+/* From Uiverse.io by kennyotsu */
+.card {
+    /* color used to softly clip top and bottom of the .words container */
+    /* --bg-color: #ebebeb; */
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+  }
+  .loader {
+    color: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 4vw;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 6vw;
+    padding: 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px; 
+  }
+  
+  .words {
+    overflow: hidden;
+    position: relative;
+  }
+  .words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%
+    );
+    z-index: 20;
+  }
+  
+  .word {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #0c0c0c;
+    animation: spin_4991 4s infinite;
+  }
+  
+  @keyframes spin_4991 {
+    10% {
+      -webkit-transform: translateY(-102%);
+      transform: translateY(-102%);
+    }
+  
+    25% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  
+    35% {
+      -webkit-transform: translateY(-202%);
+      transform: translateY(-202%);
+    }
+  
+    50% {
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+  
+    60% {
+      -webkit-transform: translateY(-302%);
+      transform: translateY(-302%);
+    }
+  
+    75% {
+      -webkit-transform: translateY(-300%);
+      transform: translateY(-300%);
+    }
+  
+    85% {
+      -webkit-transform: translateY(-402%);
+      transform: translateY(-402%);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-400%);
+      transform: translateY(-400%);
+    }
+  }
+
+
+
+
+  /* here is the cart */
+
+  /* From Uiverse.io by vinodjangid07 */ 
+/* .CartBtn {
+  width: 8vw;
+  height: 3vw;
+  border-radius: 12px;
+  border: none;
+  background-color: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .5s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+}
+
+.IconContainer {
+  position: absolute;
+  left: -3.7vw;
+  width: 2.2vw;
+  height: 2.2vw;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .7s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(17, 17, 17);
+  z-index: 1;
+  transition-duration: .5s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+.CartBtn:hover .IconContainer {
+  transform: translateX(4.25vw);
+  border-radius: 2.93vw;
+  transition-duration: .5s;
+}
+
+.CartBtn:hover .text {
+  transform: translate(0.8vw,0px);
+  transition-duration: .5s;
+}
+
+.CartBtn:active {
+  transform: scale(0.95);
+  transition-duration: .5s;
+}
+    */
+    .CartBtn {
+      width: 8vw;
+      height: 3vw;
+      min-width: 80px;  /* Ensures the button is not too small */
+      min-height: 30px;
+      max-width: 140px; /* Prevents it from getting too large */
+      max-height: 60px;
+      border-radius: 50px; /* Makes the button more rounded */
+      border: none;
+      background-color: #ebebeb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      overflow: hidden;
+      box-shadow: inset 5px 10px 10px 5px  rgba(0, 0, 0, 0.103);
+      position: relative;
+    }
+    
+    .IconContainer {
+      position: absolute;
+      left: -3.7vw;
+      width: 2.2vw;
+      height: 2.2vw;
+      min-width: 22px;
+      min-height: 22px;
+      max-width: 45px;
+      max-height: 45px;
+      background-color: transparent;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 2;
+      transition: all 0.7s ease-in-out;
+    }
+    
+    .icon {
+      border-radius: 1px;
+      width: 60%; 
+      height: 60%;
+    }
+    
+    .text {
+      height: 100%;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(3, 3, 3);
+      z-index: 1;
+      transition: all 0.5s ease-in-out;
+      font-size: 1.04em;
+      font-weight: 600;
+    }
+    
+    /* Hover Effects */
+
+    .CartBtn:hover{
+      background-color: black;
+    }
+
+    .CartBtn:hover .IconContainer {
+      transform: translateX(4.25vw);
+      border-radius: 2.93vw;
+      transition-duration: 0.5s;
+      fill: white;
+    }
+    
+    .CartBtn:hover .text {
+      transform: translate(0.8vw, 0px);
+      transition-duration: 0.5s;
+      color: white;
+    }
+    
+    /* Click Effect */
+    .CartBtn:active {
+      transform: scale(0.95);
+      transition-duration: 0.3s;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {  /* Tablets */
+      .CartBtn {
+        width: 12vw;
+        height: 5vw;
+      }
+      .IconContainer {
+        left: -4vw;
+        width: 3vw;
+        height: 3vw;
+      }
+      .CartBtn:hover .IconContainer {
+        transform: translateX(5vw);
+      }
+      .text {
+        font-size: 1em;
+      }
+    }
+    
+    @media (max-width: 768px) {  /* Mobile Devices */
+      .CartBtn {
+        width: 14vw;
+        height: 6vw;
+        min-width: 70px;
+        min-height: 35px;
+      }
+      .IconContainer {
+        left: -5vw;
+        width: 4vw;
+        height: 4vw;
+      }
+      .CartBtn:hover .IconContainer {
+        transform: translateX(6vw);
+      }
+      .text {
+        font-size: 0.9em;
+      }
+    }
+    
+    @media (max-width: 480px) {  /* Small Mobile Screens */
+      .CartBtn {
+        width: 18vw;
+        height: 8vw;
+        min-width: 60px;
+        min-height: 30px;
+      }
+      .IconContainer {
+        left: -6vw;
+        width: 5vw;
+        height: 5vw;
+      }
+      .CartBtn:hover .IconContainer {
+        transform: translateX(7vw);
+      }
+      .text {
+        font-size: 0.85em;
+      }
+    }
+
+
+    /* here is the textinline  */
+
+    .elem .moving {
+      display: flex; /* Use flex to align content in a row */
+      overflow: hidden; /* Hide overflowing content */
+      white-space: nowrap; /* Prevent text from wrapping */
+      position: relative;
+      padding: 1vw;
+      background-color: #ebebeb;
+    }
+    
+    .elem .moving .movingin {
+      display: flex;
+      white-space: nowrap;
+      gap: 2vw; /* Adds spacing between elements */
+      animation: moving 10s linear infinite;
+    }
+    
+    /* Duplicate text for smooth looping */
+    .elem .moving .movingin h5 {
+      text-transform: uppercase;
+      margin: 0 1vw;
+      font-size: 1.2vw;
+    }
+    
+    @keyframes moving {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .page2{
+      background-size: cover;
+      background-position: center;
+      background-image: url(./pic1.jpg);
+    }
+
+
+   
+    .hidden-mobile {
+      display: none !important;
+  }
+
+  #overlay1{
+    background-color: red;
+  }
+  .hidden-opacity {
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+  }
+
+
+
+  /* after the 350 it is the project page */
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 120%;
+    margin: auto;
+    scrollbar-width: none; /* Hide scrollbar */
+    padding-right: 0; /* Remove padding on right side */
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+
+  .scroll-item {
+    min-width: 45vw;
+    height: 55vh;
+    margin: 2vw;
+    background: #202020d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .scroll-btn {
+    scale: 1.6;
+    padding: .3vw .5vw;
+    border-radius: 50%;
+    border: 1px solid rgb(73, 73, 73);
+  }
+
+  .scroll-btn:hover {
+    background: #919090;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @font-face {
+    font-family: "font";
+    src: url(./font.ttf);
+  }
+
+  .font {
+    font-family: "font";
+  }
+
+
+
+/* 
+  from here it is contact page */
+
+
+  /* From Uiverse.io by AbanoubMagdy1 */ 
+.wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+}
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+}
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.wave-group .bar:before,.wave-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #ffffff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+
+
+
+/* here is the share button of the  first page */
+/* From Uiverse.io by SharpTH */ 
+.btn-cssbuttons {
+  --btn-color: #275dfe00;
+  position: relative;
+  padding: 16px 32px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 8px #275dfe00);
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ 
+ .btn-cssbuttons::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: var(--btn-color);
+  border-radius: 24px;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ 
+ .btn-cssbuttons span,
+ .btn-cssbuttons span span {
+  display: inline-flex;
+  vertical-align: middle;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ 
+ .btn-cssbuttons span {
+  transition-delay: 0.05s;
+ }
+ 
+ .btn-cssbuttons span:first-child {
+  padding-right: 7px;
+ }
+ 
+ .btn-cssbuttons span span {
+  margin-left: 8px;
+  transition-delay: 0.1s;
+ }
+ 
+ .btn-cssbuttons ul {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  transform: translateY(-50%);
+ }
+ 
+ .btn-cssbuttons ul li {
+  flex: 1;
+ }
+ 
+ .btn-cssbuttons ul li a {
+  display: inline-flex;
+  vertical-align: middle;
+  transform: translateY(55px);
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  scale: 3; /* Increased from 1.4 to 1.8 */
+ }
+ 
+ .btn-cssbuttons ul li a:hover {
+  opacity: 0.5;
+ }
+ 
+ .btn-cssbuttons:hover::before {
+  transform: scale(1.2);
+ }
+ 
+ .btn-cssbuttons:hover span,
+ .btn-cssbuttons:hover span span {
+  transform: translateY(-55px);
+ }
+ 
+ .btn-cssbuttons:hover ul li a {
+  transform: translateY(0);
+ }
+ 
+ .btn-cssbuttons:hover ul li:nth-child(1) a {
+  transition-delay: 0.15s;
+ }
+ 
+ .btn-cssbuttons:hover ul li:nth-child(2) a {
+  transition-delay: 0.2s;
+ }
+ 
+ .btn-cssbuttons:hover ul li:nth-child(3) a {
+  transition-delay: 0.25s;
+ }

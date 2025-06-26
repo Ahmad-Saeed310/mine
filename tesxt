@@ -1,0 +1,27 @@
+     <div id="lower" class="flex items-center justify-between absolute  px-[5vh] bg-yellow-300 bottom-0">
+
+                    <div id="contact" class="font3 text-[3vh]   font-medium">
+                        <h1 class="font1 mt-[3vh]">Contact</h1>
+                        <h1 class="mt-[4vh]">ahmadsaeed@ahmadsaeed.me</h1>
+                        <h1>(+92)310-85-37-406</h1>
+                    </div>
+                    <!-- <div id="logofooter">
+                        <img src="./black logo.png" alt="">
+                    </div> -->
+                    <div id="footer-links" class="flex items-center  justify-between ">
+                        <div id="social" class="font3 text-[2vh]  font-medium">
+                            <h1 class="font1">Social</h1>
+                            <h1>Instagram</h1>
+                            <h1>LinkedIn</h1>
+                            <h1>X</h1>
+                            <h1>Facebook</h1>
+                        </div>
+                        <div id="nav" class="font3 text-[2vh] font-medium">
+                            <h1 class="font1">Nav</h1>
+                            <h1>Home</h1>
+                            <h1>Projects</h1>
+                            <h1>About</h1>
+                            <h1>Menu</h1>
+                        </div>
+                    </div>
+                </div>
