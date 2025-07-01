@@ -178,3 +178,67 @@ document.addEventListener('mouseout', () => {
 
 // from here starts the codenest
 
+// Form submission handling
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    if (contactForm && submitBtn) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Change button appearance immediately to show loading state
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            
+            // Submit form using fetch API
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success - change button to green text with "Submitted" text
+                    submitBtn.textContent = 'Submitted';
+                    submitBtn.classList.remove('text-black', 'opacity-50', 'cursor-not-allowed');
+                    submitBtn.classList.add('text-green-600');
+                    submitBtn.disabled = false;
+                    
+                    // Reset form fields
+                    contactForm.reset();
+                    
+                    // Optional: Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Submit';
+                        submitBtn.classList.remove('text-green-600');
+                        submitBtn.classList.add('text-black');
+                    }, 3000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Error - reset button and show error state
+                submitBtn.textContent = 'Error - Try Again';
+                submitBtn.classList.remove('text-black', 'opacity-50', 'cursor-not-allowed');
+                submitBtn.classList.add('text-red-600');
+                submitBtn.disabled = false;
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = 'Submit';
+                    submitBtn.classList.remove('text-red-600');
+                    submitBtn.classList.add('text-black');
+                }, 3000);
+            });
+        });
+    }
+});
+
+
+
