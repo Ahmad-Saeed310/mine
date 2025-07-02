@@ -241,4 +241,182 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+window.onload = function () {
+  const animation = document.getElementById("animation");
+  const mainContent = document.getElementById("mainContent");
 
+  // Ensure animation is visible, main content is hidden
+  animation.style.display = "block";
+  mainContent.classList.add("hidden", "opacity-0");
+
+  // After 4 seconds
+  setTimeout(() => {
+    animation.style.display = "none";
+
+    // Step 1: Make it part of layout
+    mainContent.classList.remove("hidden");
+
+    // Step 2: Trigger fade-in after short delay
+    setTimeout(() => {
+      mainContent.classList.remove("opacity-0");
+    }, 50); // ~one frame delay to trigger transition
+  }, 4000);
+};
+
+
+
+// gsap for the line 
+// let line = document.getElementById("line");
+
+// gsap.from(["#line","#counter"],{
+//     y:"5vh",
+//     duration:2,
+//     ease:"power2.in"
+
+
+// })
+
+
+
+// images animation
+const bgDiv = document.getElementById("bgSlider");
+
+let index = 1;
+const totalImages = 8;
+
+setInterval(() => {
+  bgDiv.style.backgroundImage = `url('/LoaderImages/image${index}.jpg')`;
+
+  index++;
+  if (index > totalImages) {
+    index = 8; // reset to first image
+  }
+}, 300); // change every 100 milliseconds (0.1 sec)
+
+
+
+// gsapfor the fade
+// gsap.to("#bgSlider",{
+//     opacity:0,
+//     delay:3
+// }
+// )
+gsap.to("#bgSlider",{
+    height:"100vh",
+    opacity:0,
+    width:"100vw",
+    delay:3.8
+}
+)
+
+let obj = { val: 0 };
+let counter = document.getElementById("counter");
+
+// Create a timeline
+let tl = gsap.timeline();
+
+// Step 1: Animate from 0 to 60
+tl.to(obj, {
+  val: 22,
+  duration: 1,
+  ease: "power2.out",
+  onUpdate: () => {
+    counter.textContent = Math.round(obj.val) + "%";
+  }
+});
+
+// Step 2: Pause (delay)
+tl.to({}, { duration: .5 }); // 1 second pause
+
+// Step 3: Animate from 60 to 100
+tl.to(obj, {
+  val: 100,
+  duration: 1,
+  ease: "power2.inout",
+  onUpdate: () => {
+    counter.textContent = Math.round(obj.val) + "%";
+  }
+});
+
+// animating the nav
+gsap.from("#nav", {
+  y: -100,
+  duration: 1,
+  ease: "power2.out",
+  delay: 4
+});
+
+
+// splitting  the name 
+// split all elements with the class "split" into words and characters
+// let split = SplitText.create(".name1", { type: "words, chars" });
+
+// // now animate the characters in a staggered fashion
+// gsap.from(split.chars, {
+//   duration: 1, 
+//   y: 100, 
+//   mask: "lines",  
+//   delay:4.4,      // animate from 100px below
+//   autoAlpha: 0,   // fade in from opacity: 0 and visibility: hidden
+//   stagger: 0.05,  // 0.05 seconds between each
+// });
+// let split1 = SplitText.create(".name2", { type: "words, chars" });
+
+// // now animate the characters in a staggered fashion
+// gsap.from(split1.chars, {
+//   duration: 1, 
+//   y: 100,   
+//   mask: "lines",
+//   delay:4.5,      // animate from 100px below
+//   autoAlpha: 0,   // fade in from opacity: 0 and visibility: hidden
+//   stagger: 0.05,  // 0.05 seconds between each
+// });
+
+// Split text into characters
+let split = SplitText.create(".name1", {
+  type: "chars"
+});
+
+// Wrap each char in an overflow-hidden inline-block (like a mask)
+split.chars.forEach(char => {
+  const wrapper = document.createElement("span");
+  wrapper.classList.add("overflow-hidden", "inline-block", "align-bottom"); // Tailwind classes
+
+  char.parentNode.insertBefore(wrapper, char);
+  wrapper.appendChild(char);
+});
+
+// Animate characters from below, only visible while entering
+gsap.from(split.chars, {
+  y: 200,               // start from below
+          // fade in
+  duration: 1,
+  delay: 4.5,
+  stagger: 0.1,
+  ease: "power2.out"
+});
+
+
+// Split text into characters
+let split1 = SplitText.create(".name2", {
+  type: "chars"
+});
+
+// Wrap each char in an overflow-hidden inline-block (like a mask)
+split1.chars.forEach(char => {
+  const wrapper = document.createElement("span");
+  wrapper.classList.add("overflow-hidden", "inline-block", "align-bottom"); // Tailwind classes
+
+  char.parentNode.insertBefore(wrapper, char);
+  wrapper.appendChild(char);
+});
+
+// Animate characters from below, only visible while entering
+gsap.from(split1.chars, {
+  y: 200,               // start from below
+          // fade in
+  duration: 1,
+  delay: 4.5,
+  stagger: 0.1,
+  ease: "power2.out"
+});
