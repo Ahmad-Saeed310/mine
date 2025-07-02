@@ -285,7 +285,7 @@ let index = 1;
 const totalImages = 8;
 
 setInterval(() => {
-  bgDiv.style.backgroundImage = `url('/LoaderImages/image${index}.jpg')`;
+  bgDiv.style.backgroundImage = `url('/optimizeLoader/image${index}.jpg')`;
 
   index++;
   if (index > totalImages) {
