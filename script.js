@@ -285,7 +285,18 @@ let index = 1;
 const totalImages = 8;
 
 setInterval(() => {
-  bgDiv.style.backgroundImage = `url('./optimizeLoader/image${index}.jpg')`;
+
+  let arr = ["https://plus.unsplash.com/premium_photo-1669863547357-b7d064cedaac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
+     "https://plus.unsplash.com/premium_photo-1750852205683-5be275439ef9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D", 
+     "https://images.unsplash.com/photo-1744457167275-99648d0e589d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D", 
+     "https://plus.unsplash.com/premium_photo-1751385420393-9d321b729ee6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0Mnx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1750755072927-4221f5018635?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OHx8fGVufDB8fHx8fA%3D%3D",
+       "https://images.unsplash.com/photo-1751356424626-71c30ced9eec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1OHx8fGVufDB8fHx8fA%3D%3D", 
+       "https://images.unsplash.com/photo-1750779940886-edfa73b5c5c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMTV8fHxlbnwwfHx8fHw%3D",
+        "https://plus.unsplash.com/premium_photo-1667065570879-4f220100398d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8"];
+
+  bgDiv.style.backgroundImage = `url('${arr[index - 1]}')`;
+  // bgDiv.style.backgroundImage = `url('./optimizeLoader/image${index}.jpg')`;
 
   index++;
   if (index > totalImages) {
@@ -420,3 +431,182 @@ gsap.from(split1.chars, {
   stagger: 0.1,
   ease: "power2.out"
 });
+
+// Enhanced Mobile Menu Functionality
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+let isMenuOpen = false;
+
+// Function to prevent scrolling
+function preventScroll(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  return false;
+}
+
+// Function to disable scrolling completely
+function disableScroll() {
+  // Store current scroll position
+  const scrollY = window.scrollY;
+  
+  // Apply styles to prevent all scrolling
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.overflow = 'hidden';
+  document.body.style.width = '100%';
+  document.documentElement.style.overflow = 'hidden';
+  
+  // Prevent touch scrolling and wheel scrolling
+  document.addEventListener('touchmove', preventScroll, { passive: false });
+  document.addEventListener('wheel', preventScroll, { passive: false });
+  document.addEventListener('keydown', preventScrollKeys, { passive: false });
+}
+
+// Function to enable scrolling
+function enableScroll() {
+  // Get the stored scroll position
+  const scrollY = document.body.style.top;
+  
+  // Remove all scroll-preventing styles
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.overflow = '';
+  document.body.style.width = '';
+  document.documentElement.style.overflow = '';
+  
+  // Restore scroll position
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  
+  // Remove event listeners
+  document.removeEventListener('touchmove', preventScroll);
+  document.removeEventListener('wheel', preventScroll);
+  document.removeEventListener('keydown', preventScrollKeys);
+}
+
+// Prevent scroll with keyboard
+function preventScrollKeys(e) {
+  const keys = [32, 33, 34, 35, 36, 37, 38, 39, 40]; // space, page up/down, end, home, arrows
+  if (keys.includes(e.keyCode)) {
+    e.preventDefault();
+    return false;
+  }
+}
+
+// Open mobile menu
+mobileMenuBtn.addEventListener('click', () => {
+  if (!isMenuOpen) {
+    // Open menu
+    isMenuOpen = true;
+    mobileMenu.style.transform = 'translateX(0)';
+    disableScroll();
+    
+    // Animate hamburger to X
+    const spans = mobileMenuBtn.querySelectorAll('span');
+    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+  } else {
+    // Close menu (hamburger X is clicked)
+    closeMobileMenuFunction();
+  }
+});
+
+// Close mobile menu
+function closeMobileMenuFunction() {
+  isMenuOpen = false;
+  mobileMenu.style.transform = 'translateX(100%)';
+  enableScroll();
+  
+  // Reset hamburger icon
+  const spans = mobileMenuBtn.querySelectorAll('span');
+  spans[0].style.transform = 'rotate(0) translate(0, 0)';
+  spans[1].style.opacity = '1';
+  spans[2].style.transform = 'rotate(0) translate(0, 0)';
+}
+
+// Remove the close button event listener since we removed the close button
+
+// Close menu when a link is clicked with smooth navigation
+mobileMenuLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    const targetId = link.getAttribute('href');
+    
+    // Close menu first
+    closeMobileMenuFunction();
+    
+    // Smooth scroll to section after menu closes
+    if (targetId.startsWith('#')) {
+      e.preventDefault();
+      setTimeout(() => {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 600); // Wait for menu closing animation
+    }
+  });
+});
+
+// Close menu on escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && isMenuOpen) {
+    closeMobileMenuFunction();
+  }
+});
+
+// Handle orientation change to maintain scroll lock
+window.addEventListener('orientationchange', () => {
+  if (isMenuOpen) {
+    setTimeout(() => {
+      disableScroll();
+    }, 100);
+  }
+});
+
+// Prevent any scroll leakage when menu is open
+window.addEventListener('scroll', () => {
+  if (isMenuOpen) {
+    const currentTop = parseInt(document.body.style.top || '0');
+    window.scrollTo(0, currentTop * -1);
+  }
+});
+
+
+
+
+// for the icon 
+  const favicon = document.getElementById('favicon');
+  const icons = ['A.png', 'S.png']; // You can add more if needed
+  let indexs = 0;
+
+  setInterval(() => {
+    favicon.href = icons[indexs];
+    indexs = (indexs + 1) % icons.length;
+  }, 1000);
+
+
+
+  // rotating  images
+  
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from("#image1", {
+    x: -200,
+    rotation: -20,
+    scrollTrigger: {
+      trigger: "#image1", // Use the variable, not the bare identifier
+      start: "top 90%",
+      // markers: true // Markers should show if GSAP and ScrollTrigger are loaded
+      markers: true // Markers should show if GSAP and ScrollTrigger are loaded
+    }
+  });

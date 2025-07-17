@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AHMAD SAEED</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="/ASBlackLogo.png">
+  <script rel="preload" src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="icon" href="/ASBlackLogo.png"> -->
+  <link id="favicon" rel="icon" type="image/png" href="A.png">
 </head>
 
 <body class="h-full w-full box-border  ">
@@ -22,50 +25,49 @@
                 0%
             </div>
         </div>
-        <!-- <div id="pics"  class="absolute h-[20vh] w-[35vh] bg-black bg-[url(LoaderImages/image1.jpg)] bg-cover rounded-lg "></div> -->
-        <!-- <div id="line" class="h-[95vh] w-[.3vh] bg-black "></div> -->
-  <!-- Optional loading animation -->
+        
 </div>
-<!-- comment -->
+
       </div>
     </div>
     <div id="mainContent" class="hidden  transition-opacity duration-900 ease-in">
-      <div id="nav" class="h-[10vh]  w-full  fixed flex justify-between items-center px-10 pt-[5vh]">
-        <div id="logo" class="h-[8vh] w-[9vh]">
-         <img src="ASBlackLogo1.png" alt="">
+      <div id="nav" class="h-[10vh] w-full fixed flex justify-between items-center px-4 md:px-10 pt-[3vh] md:pt-[5vh] z-50">
+        <div id="logo" class="h-[6vh] w-[7vh] md:h-[8vh] md:w-[9vh]">
+         <img src="ASBlackLogo1.png" alt="" class="w-full h-full object-contain">
         </div>
-        <div id="elem" class="font3 gap-[5vh] mr-[5vh] flex justify-between items-center">
-          <a href="#page1">Home</a>
-          <a href="#words">Work</a>
-          <a href="#text1">About</a>
-          <h1 class="md:hidden">Menu</h1>
+        
+       
+        <div id="elem" class="font3 hidden md:flex gap-[5vh] mr-[5vh] justify-between items-center">
+          <a href="#page1" class="hover:opacity-70 transition-opacity duration-300">Home</a>
+          <a href="#words" class="hover:opacity-70 transition-opacity duration-300">Work</a>
+          <a href="#text1" class="hover:opacity-70 transition-opacity duration-300">About</a>
         </div>
       </div>
-      <div id="page1" class="hero h-[100vh] w-auto bg-white">
-        <div id="name" class="leading-none flex flex-col justify-center overflow-hidden inline-block text-center pt-[20vh]">
-          <h1 class="font1 name1 text-center text-[28vh] mt-[8vh]">AHMAD</h1>
-          <h1 class="font2 name2 text-[28vh] mt-[-9vh]">SAEED</h1>
+      <div id="page1" class="hero h-[100vh] overflow-x-hidden w-auto bg-white">
+        <div id="name" class="leading-none pt-[40vh] flex flex-col  justify-center overflow-hidden inline-block text-center md:pt-[20vh]">
+          <h1 class="font1 name1 text-center text-[10vh] md:text-[28vh] md:mt-[8vh]">AHMAD</h1>
+          <h1 class="font2 name2 text-[10vh] md:text-[28vh] md:mt-[-9vh]">SAEED</h1>
         </div>
 
       </div>
-      <div id="page2" class="h-[100vh]  w-auto bg-white ">
-        <div id="images" class="w-auto flex justify-center   ">
-          <div id="image" class="top-0"> <img src="./image11.jfif" alt="">
+      <div id="page2" class="md:h-[100vh] h-[400vh] w-full bg-white ">
+        <div id="images" class="w-full flex flex-col md:flex-row h-auto   ">
+          <div id="image1" class="top-0"> <img src="./image11.jfif" alt="">
             <h3 class="font5 text-[3vh] text-black">Colors.</h3>
           </div>
-          <div id="image"> <img src="./image33.jfif" alt="">
+          <div id="image2"> <img src="./image33.jfif" alt="">
             <h3 class="font5 text-[3vh] text-black">Colors.</h3>
           </div>
-          <div id="image"> <img src="./image22.jpg" alt="">
+          <div id="image3"> <img src="./image22.jpg" alt="">
             <h3 class="font5 text-[3vh] text-black">Dillupeek.</h3>
           </div>
-          <div id="image"> <img src="./image44.jfif" alt="">
+          <div id="image4"> <img src="./image44.jfif" alt="">
             <h3 class="font5 text-[3vh] text-black">Truth.</h3>
           </div>
-          <div id="image"> <img src="./image55.jfif" alt="">
+          <div id="image5"> <img src="./image55.jfif" alt="">
             <h3 class="font5 text-[3vh] text-black">Deny.</h3>
           </div>
-          <div id="image"> <img src="./image66.jfif" alt="">
+          <div id="image6"> <img src="./image66.jfif" alt="">
             <h3 class="font5 text-[3vh] text-black">Crave.</h3>
           </div>
         </div>
@@ -76,222 +78,77 @@
         </div>
       </div>
       <div id="words"
-        class="h-[100vh] w-auto bg-white pt-[10vh] page2 text-center leading-none pt-[25vh] bg-[url('word5.jfif')] ">
-        <div class="elem elem1  relative  px-[0vw] mx-[70vh]   " data-img="./word1.jfif">
-          <a class="cursor-pointer text-[6vw] opacity-50 shuffle-text uppercase font2 hover:opacity-100"
-            href="https://codenestweb.netlify.app/">The
-            Shift
+        class="h-[100vh] w-auto bg-white  page2 text-center flex flex-col items-center leading-none md:pl-[60vw] pt-[70vh] bg-[url('word5.jfif')] ">
+        <div class="elem elem1  relative    " data-img="./Images/TheShift.jpg">
+          <a class="cursor-pointer text-[3vw] opacity-50  uppercase font2 hover:opacity-100"
+            href="https://codenestweb.netlify.app/">The-Shift
           </a>
 
         </div>
-        <div class="elem elem1  relative  px-[0vw]   mx-[70vh] " data-img="./word2.gif">
-          <a class="cursor-pointer text-[6vw] opacity-50 shuffle-text uppercase font2 hover:opacity-100"
+        <div class="elem elem1  relative  " data-img="./Images/codenest.jpg">
+          <a class="cursor-pointer text-[3vw] opacity-50  uppercase font2 hover:opacity-100"
             href="https://bespoke-swan-ff739a.netlify.app/">Codenest
           </a>
 
         </div>
-        <div class="elem elem1  relative  px-[0vw]  mx-[70vh]   " data-img="./word3.jfif">
+        <div class="elem elem1  relative   " data-img="./Images/Epicbyte.jpg">
           <h2
-            class="cursor-pointer bg-cover opacity-50 bg-contain repeat-none text-[6vw] shuffle-text uppercase font2 hover:opacity-100">
+            class="cursor-pointer bg-cover opacity-50 bg-contain repeat-none text-[3vw]  uppercase font2 hover:opacity-100">
             EpicByte
           </h2>
 
         </div>
-        <div class="elem elem1  relative  px-[0vw] mx-[60vh]  " data-img="./word4.jfif">
-          <h2 class="cursor-pointer text-[6vw] opacity-50 shuffle-text uppercase font2 hover:opacity-100">
-            Khawaja&Co
+        <div class="elem elem1  relative    " data-img="./Images/Tri-lgl-srv.jpg">
+          <h2 class="cursor-pointer text-[3vw] opacity-50  uppercase font2 hover:opacity-100">
+            Tri-lgl-src
           </h2>
 
         </div>
       </div>
-      <div id="text1" class="h-[100vh] w-auto bg-white pt-[18vh] ">
-        <div id="text1" class="font1  text-[3vh] ml-[5vh]  ">(What We Do.)</div>
+      <div id="text1" class="h-[100vh] w-full bg-white pt-[18vh] ">
+        <div id="text1" class="font1  text-[2vh] md:text-[3vh] ml-[5vh]  ">(What We Do.)</div>
         <div id="text2">
-          <h1 class="font3 text-[10vh] text-center  font-light leading-none"> <span
-              class="text-[12vh] font-regular  font4 font-semibold tracking-tight"> crafting, thinking,
+          <h1 class="font3 md:text-[10vh] text-[3vh] text-center  font-light leading-none"> <span
+              class="md:text-[12vh] text-[4vh] font-regular  font4 font-semibold tracking-tight"> crafting, thinking,
               building</span> <br>
-            and <span class="text-[12vh] font-regular  font4 font-semibold tracking-tight"> partnering </span>
+            and <span class="md:text-[12vh] text-[4vh] font-regular  font4 font-semibold tracking-tight"> partnering </span>
             with driven <br>
-            <span class="text-[12vh] font-regular  font4 font-semibold tracking-tight"> individuals </span> to
-            <span class="text-[12vh] font-regular  font4 font-semibold tracking-tight"> turn </span> bold <span
-              class="text-[12vh] font4 font-semibold tracking-tight"> ideas </span> <br>
-            into powerful <span class="text-[12vh] font4 font-semibold tracking-tight"> digital </span> <br>
+            <span class="md:text-[12vh] text-[4vh] font-regular  font4 font-semibold tracking-tight"> individuals </span> to
+            <span class="md:text-[12vh] text-[4vh] font-regular  font4 font-semibold tracking-tight"> turn </span> bold <span
+              class="md:text-[12vh] text-[4vh] font4 font-semibold tracking-tight"> ideas </span> <br>
+            into powerful <span class="md:text-[12vh] text-[4vh] font4 font-semibold tracking-tight"> digital </span> <br>
             experience.
           </h1>
         </div>
       </div>
-      <!-- <div id="contact-1" class="h-screen w-full bg-red-400">
-                  <div id="container-img" class="flex items-center justify-center gap-[5vh] h-[100vh] w-full flex-wrap mt-[10vh]">
-                      <div id="img1">
-      
-                          <img class="h-[20vh] w-[40vh] transform -rotate-45 " src="./Hands/Hand1.png" alt="">
-                      </div>
-                      <div   id="img2">
-      
-                         
-                          <img  src="./Hands/Hand3.png" alt="">
-                      </div>
-                      <div id="img3">
-      
-                          <img src="./Hands/Hand4.png" alt="">
-                      </div>
-                      <div id="img4">
-      
-                     
-                          <img src="./Hands/Hand5.png" alt="">
-                      </div>
-                      <div id="img4">
-      
-                     
-                          <img src="./Hands/Hand6.png" alt="">
-                      </div>
-                      <div id="img4">
-      
-                     
-                            <img src="./Hands/Hand IMp.png" alt="">
-                      </div>
-                      <div id="img4">
-      
-                     
-                            <img src="./Hands/Hand7.png" alt="">
-                      </div>
-                      <div id="img4">
-      
-                     
-                        <img src="./Hands/Hand8.png" alt="">
-                      </div>
-                      <div id="img4">
-      
-                     
-                              <img src="./Hands/Hand9.png" alt="">
-                      </div>
-                     
-                  </div>
-      
-              </div> -->
-      <!-- <div id="contact" class="h-[100vh] w-auto bg-white pt-[15vh]  relative ">
-                  <div id="need" class="font3 text-[8vh] ml-[10vh] font-medium  ">
-                      <h1>Need a Web.</h1>
-                      <div id="content" class="flex flex-col ml-[20vh] mt-[5vh]">
-                          <!-- <div id="story" class="font5 text-[5vh] ml-[10vh] font-medium">
-                          <input
-                              id="username"
-                              name="username"
-                              type="text"
-                              class="border-b border-gray-900 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
-                            />
-                            <label
-                              for="username"
-                              class="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
-                              >The Story.</label
-                            >
-                          <h1 >The Story.</h1>
-                          <div id="line" class="border border-black border-[.1vh] mt-[5vh] mr-[70vh]"></div>
-                      </div>
-                      <div id="story" class="font5 text-[5vh] ml-[10vh] font-medium">
-                          <h1>Email.</h1>
-                          <div id="line" class="border border-black border-[.1vh] mt-[5vh] mr-[70vh]"></div>
-                      </div>
-                      <div class="flex items-center justify-center">
-                          <div class="relative">
-                            <input
-                              id="username"
-                              name="username"
-                              type="text"
-                              class="border-b border-gray-900 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
-                            />
-                            <label
-                              for="username"
-                              class="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
-                              >Name</label
-                            >
-                          </div>
-                        </div>
-                        
-                      
-                       <button>Send</button> 
-                      </div>
-                      <div id="inputs" class="flex flex-col">
-                      <form action="https://api.web3forms.com/submit" method="POST">
-                          <input type="hidden" name="access_key" value="564de3c9-370d-4ebd-9731-81c868bfda0b">
-                              <input type="text" id="name" name="Name" placeholder="Name"
-                                  class="border-b text-[4vh] border-gray-900 mr-[70vh] py-1 text-black focus:border-b-2 focus:border-stone-700 transition-colors focus:outline-none peer bg-inherit mb-[5vh]" />
-      
-                              <input type="email" id="email" name="email" placeholder="Email."
-                                  class="border-b  text-[4vh] border-gray-900 mr-[70vh] py-1 text-black focus:border-b-2 focus:border-stone-700 transition-colors focus:outline-none peer bg-inherit mb-[5vh]" />
-                              <button type="submit" class="text-black text-[5vh]">Submit Form</button>
-                          </div>
-                      </form>
-                  </div>
-                  <div id="lower" class="flex items-center justify-between px-[5vh] mt-[20vh] ">
-                      <div id="contact" class="font3 text-[3vh]   font-medium">
-                          <h1 class="font1 mt-[3vh]">Contact</h1>
-                          <h1 class="mt-[4vh]">ahmadsaeed@ahmadsaeed.me</h1>
-                          <h1>(+92)310-85-37-406</h1>
-                      </div>
-                      <div id="logofooter" class="h-[20vh] w-[25vh]">
-                          <img src="./black logo.png" alt="">
-                      </div>
-                      <div id="footer-links" class="flex items-center gap-[10vh] justify-between ">
-                          <div id="social" class="font3 text-[2vh]  font-medium">
-                              <h1 class="font1 ">Social</h1>
-                              <h1 class="mt-[2vh]">Instagram</h1>
-                              <h1>LinkedIn</h1>
-                              <h1>X</h1>
-                              <h1>Facebook</h1>
-                          </div>
-                          <div id="nav" class="font3 text-[2vh] font-medium">
-                              <h1 class="font1">Nav</h1>
-                              <h1 class="mt-[2vh]">Home</h1>
-                              <h1>Projects</h1>
-                              <h1>About</h1>
-                              <h1>Menu</h1>
-                          </div>
-                      </div>
-      
-                  </div>
-      </div> -->
+      <div id="marquee" class="h-[20vh] w-full bg-white overflow-hidden">
+        <div id="container" class="relative w-max animate-marquee whitespace-nowrap  flex items-center  gap-[20vh]" >
+          
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+            <h5 class="font1">AHMAD</h5>
+            <h5 class="font2">SAEED</h5>
+         
+        </div>
+      </div>
       <div id="contact" class="h-[100vh] w-auto bg-white pt-[10vh] relative">
         <div id="need" class="font3 text-[8vh] ml-[10vh] font-medium">
           <h1>Need a Web.</h1>
           <div id="content" class="flex flex-col ml-[20vh] mt-[5vh]">
-            <!-- <div id="story" class="font5 text-[5vh] ml-[10vh] font-medium">
-                          <input
-                              id="username"
-                              name="username"
-                              type="text"
-                              class="border-b border-gray-900 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
-                            />
-                            <label
-                              for="username"
-                              class="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
-                              >The Story.</label
-                            >
-                          <h1 >The Story.</h1>
-                          <div id="line" class="border border-black border-[.1vh] mt-[5vh] mr-[70vh]"></div>
-                      </div>
-                      <div id="story" class="font5 text-[5vh] ml-[10vh] font-medium">
-                          <h1>Email.</h1>
-                          <div id="line" class="border border-black border-[.1vh] mt-[5vh] mr-[70vh]"></div>
-                      </div>
-                      <div class="flex items-center justify-center">
-                          <div class="relative">
-                            <input
-                              id="username"
-                              name="username"
-                              type="text"
-                              class="border-b border-gray-900 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
-                            />
-                            <label
-                              for="username"
-                              class="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
-                              >Name</label
-                            >
-                          </div>
-                        </div>
-                        
-                      
-                       <button>Send</button> -->
           </div>
           <div id="inputs" class="h-[20vh]">
             <form id="contactForm" action="https://api.web3forms.com/submit" class="flex flex-col" method="POST">
@@ -308,24 +165,24 @@
             </form>
           </div>
         </div>
-        <div id="lower" class="flex items-center justify-between px-[5vh] mt-[30vh]">
+        <div id="lower" class="flex flex-col md:flex-row items-center bg-white w-full justify-between px-[5vh] mt-[30vh]">
           <div id="contact" class="font3 text-[3vh] font-medium">
             <h1 class="font1 mt-[3vh]">Contact</h1>
             <h1 class="mt-[4vh]">ahmadsaeed@ahmadsaeed.me</h1>
             <h1>(+92)310-85-37-406</h1>
           </div>
           <div id="logofooter" class="h-[20vh] w-[40vh]">
-            <img src="/ASBlackLogo1.png" alt="" />
+            <img src="ASBlackLogo1.png" alt="" />
           </div>
-          <div id="footer-links" class="flex items-center gap-[10vh] justify-between">
-            <div id="social" class="font3 text-[2vh] font-medium">
-              <h1 class="font1">Social</h1>
-              <h1 class="mt-[2vh]">Instagram</h1>
+          <div id="footer-links" class="flex md:flex-row  items-center md:gap-[10vh] justify-between">
+            <div id="social" class="font3 text-[2vh] flex items-center md:gap-[0vh]  md:flex-col font-medium">
+              <h1 class="font1 hidden md:block">Social</h1>
+              <h1 class="md:mt-[2vh]">Instagram</h1>
               <h1>LinkedIn</h1>
-              <h1>X</h1>
-              <h1>Facebook</h1>
+              <h1 class="hidden md:block">X</h1>
+              <h1 class="hidden md:block">Facebook</h1>
             </div>
-            <div id="nav" class="font3 text-[2vh] font-medium">
+            <div id="nav" class="font3 hidden md:block text-[2vh] font-medium">
               <h1 class="font1">Nav</h1>
               <h1 class="mt-[2vh]">Home</h1>
               <h1>Projects</h1>
