@@ -240,6 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// the window animation
 
 window.onload = function () {
   const animation = document.getElementById("animation");
